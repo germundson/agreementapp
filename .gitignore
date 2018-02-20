@@ -1,6 +1,6 @@
 .DS_Store
 *.log
-/*/target/
+target/
 .idea
 /project/project/target
 /project/target
