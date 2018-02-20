@@ -8,4 +8,5 @@ target/
 *.sql
 ~
 *.iml
-
+rest.sh
+soap.sh
