@@ -1,0 +1,11 @@
+{
+  "agreementName": "TestAgreement",
+  "agrementType": "TYPE_1",
+  "customer": {
+    "addresse": "Test Street 1",
+    "city": "Test City",
+    "country": "Test COuntry",
+    "name": "Test Name",
+    "zipCode": "0101"
+  }
+}

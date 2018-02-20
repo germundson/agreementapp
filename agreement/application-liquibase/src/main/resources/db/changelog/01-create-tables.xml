@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+  <changeSet id="create_transaction_log" author="ege">
+    <comment>log all transactions</comment>
+    <sql>
+      create table log (
+      id bigserial not null,
+      timestamp timestamp,
+      method text,
+      token text,
+      direction text,
+      data_obj text
+      );
+    </sql>
+  </changeSet>
+
+</databaseChangeLog>

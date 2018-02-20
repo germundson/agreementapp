@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://insurance.app.com/ws">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ws:getAgreementRequest>
+      <ws:agreement>
+        <ws:id>?</ws:id>
+        <ws:agreementName>?</ws:agreementName>
+        <ws:agreementType>TYPE_1</ws:agreementType>
+        <ws:isSentToCustomer>?</ws:isSentToCustomer>
+        <ws:customer>
+          <ws:id>?</ws:id>
+          <ws:name>?</ws:name>
+          <ws:addresse>?</ws:addresse>
+          <ws:zipcode>?</ws:zipcode>
+          <ws:city>?</ws:city>
+          <ws:country>?</ws:country>
+          <ws:updated>?</ws:updated>
+        </ws:customer>
+        <ws:updated>?</ws:updated>
+      </ws:agreement>
+    </ws:getAgreementRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

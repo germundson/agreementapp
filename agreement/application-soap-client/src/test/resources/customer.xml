@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://insurance.app.com/ws">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ws:getCustomerRequest>
+      <ws:customer>
+        <ws:name>?</ws:name>
+        <ws:addresse>?</ws:addresse>
+        <ws:zipcode>?</ws:zipcode>
+        <ws:city>?</ws:city>
+        <ws:country>?</ws:country>
+
+      </ws:customer>
+    </ws:getCustomerRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

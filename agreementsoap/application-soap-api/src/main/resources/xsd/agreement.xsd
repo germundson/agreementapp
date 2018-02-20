@@ -1,0 +1,67 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://insurance.app.com/ws"
+           targetNamespace="http://insurance.app.com/ws" elementFormDefault="qualified">
+
+  <xs:element name="getCustomerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="customer" type="tns:customer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="getCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="customer" type="tns:customer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="getAgreementRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="agreement" type="tns:agreement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="getAgreementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="agreement" type="tns:agreement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="customer">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="addresse" type="xs:string"/>
+      <xs:element name="zipcode" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="country" type="xs:string"/>
+      <xs:element name="updated" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agreement">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="agreementName" type="xs:string"/>
+      <xs:element name="agreementType" type="tns:agreementType"/>
+      <xs:element name="isSentToCustomer" type="xs:boolean"/>
+      <xs:element name="customer" type="tns:customer"/>
+      <xs:element name="updated" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="agreementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TYPE_1"/>
+      <xs:enumeration value="TYPE_2"/>
+      <xs:enumeration value="TYPE_3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

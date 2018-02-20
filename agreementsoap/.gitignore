@@ -1,0 +1,12 @@
+/.DS_Store
+*.log
+/*/target/
+/project/project/target
+/project/target
+/readme.html
+*.sql
+~
+*.iml
+.idea
+/atlassian-ide-plugin.xml
+.idea

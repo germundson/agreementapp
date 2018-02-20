@@ -1,0 +1,25 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+  <changeSet id="Add_test_Data_customer" author="ege" dbms="h2">
+    <sql>
+
+      insert into customer(created,updated,application_id,name,addresse,zip_code,city,country)
+      values(
+      current_timestamp,
+      current_timestamp,
+      'ddc82aa4-1617-11e8-977e-784f43655875',
+      'TEST NAME',
+      'TEST ADDRESSE',
+      '1234',
+      'TEST CITY',
+      'TEST COUNTRY'
+      );
+
+    </sql>
+  </changeSet>
+
+</databaseChangeLog>

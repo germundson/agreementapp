@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+  <changeSet id="Add_sequnece_to_log_and_alter_table" author="ege">
+    <comment>add sequnce for id in incoming_transaction_log</comment>
+    <sql>
+      create sequence log_log_seq
+      start with 1
+      increment 1
+      NO MAXVALUE
+      CACHE 1;
+    </sql>
+    <sql dbms="postgresql">
+      select setval('log_log_seq', max(id)) from log;
+    </sql>
+    <sql>
+      alter table log alter id set default nextval('log_log_seq');
+    </sql>
+  </changeSet>
+
+  <changeSet id="hibernate_seq" author="ege">
+    <sql>
+      create sequence hibernate_sequence
+      start with 1
+      increment 1
+      NO MAXVALUE
+      CACHE 1;
+    </sql>
+  </changeSet>
+
+</databaseChangeLog>
